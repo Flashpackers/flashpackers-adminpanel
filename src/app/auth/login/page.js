@@ -1,6 +1,7 @@
 import AuthFormLayout from "../../../component/AuthFormLayout";
 import authBgOtherImg from "../../../assets/images/auth-bg.png"
 import waveOtherImg from "../../../assets/images/wave.png"
+import React from 'react';
 const Login = () => {
   return (
     <div>
