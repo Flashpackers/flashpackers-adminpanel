@@ -3,7 +3,8 @@
 @tailwind utilities;
 body{
     background-image: linear-gradient(white ,rgb(198, 246, 216));
- height: inherit;   
+ height: inherit; 
+overflow-y: hidden;
 }
 html{
     height: 100%;
