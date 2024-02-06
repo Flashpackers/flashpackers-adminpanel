@@ -48,51 +48,51 @@ function AuthFormLayout1() {
 
     return (
         <div className="flex h-lvh sm:justify-center justify-center lg:justify-start items-center">
-            <div className="mx-12 flex items-center justify-center lg:max-w-lg">
+            <div className="mx-12 mb-[65px] flex items-center justify-center lg:max-w-lg">
                 <div className="flex h-full flex-col">
                     <div className="shrink">
                         <div>
                             <a to="/" className="flex items-center">
                                 <img
-                                    width={156}
+                                    width={120}
                                     src={logoDarkImg}
                                     alt="logo"
-                                    className="flex relative aspect-square right-6 dark:flex"
+                                    className="flex relative left-2 aspect-square dark:flex"
                                 />
                                 <img
-                                    width={150}
+                                    width={120}
                                     src={logoLightImg}
                                     alt="logo"
-                                    className="hidden h-48 dark:hidden"
+                                    className=" h-48 dark:hidden hidden relative aspect-square"
                                 />
                             </a>
                         </div>
-                        <div className="py-6">
-                            <h1 className="mb-2 font-bold text-[35px] text-default-800">
+                        <div className="py-6 pl-6">
+                            <h1 className="mb-2 font-semibold text-[32px] text-gray-800">
                                 Login
                             </h1>
-                            <p className="max-w-md w-64 sm:w-96 text-lg text-gray-600 text-default-500">Enter your credentials to access Flashpackers.</p>
+                            <p className="max-w-md mb-2 w-64 sm:w-96 text-md text-gray-600 text-default-500">Enter your credentials to access Flashpackers.</p>
                         </div>
                     </div>
-                    <form className="flex flex-col relative ">
-                        <label className="my-3 lg:text-xl" htmlFor="email">Email</label>
-                        <input className="py-3 px-4 border-2 lg:w-[400px] lg:h-14 border-gray-200 pl-3 sm:w-96 w-64 rounded-lg placeholder:text-lg placeholder-gray-600" onBlur={showEmail} name="email" type="text" placeholder="Enter your email" required />
+                    <form className="flex flex-col relative pl-6">
+                        <label className="mb-2 lg:text-md" htmlFor="email">Email</label>
+                        <input className="py-3 px-4 border-2 lg:w-[382px] lg:h-12 border-gray-200 pl-3 sm:w-96 w-64 rounded-lg placeholder:text-lg placeholder-gray-500" onBlur={showEmail} name="email" type="text" placeholder="Enter your email" required />
                         <span id="enteremail" className="text-red-700 hidden">Please enter your Email</span>
                         <span id="invalidemail" className="text-red-700 hidden">Please enter valid Email</span>
-                        <label className="my-3 relative  lg:text-xl top-4" htmlFor="password">Password</label>
+                        <label className="mb-2 relative  lg:text-md top-4" htmlFor="password">Password</label>
                         <div className="relative top-4">
-                            <input className=" py-3 pr-[74px] pl-4 border-2 lg:w-[400px] lg:h-14 border-gray-200 sm:w-96 w-64 rounded-lg" name="password" onBlur={showPass} type="password" required />
+                            <input className=" py-3 pr-[74px] pl-4 border-2 lg:w-[382px] lg:h-12 border-gray-200 sm:w-96 w-64 rounded-lg" name="password" onBlur={showPass} type="password" required />
                             <span className="bg-gray-200 w-[1px] h-12 absolute top-[2px] right-[60px]"></span>
 
-                            {!isActive && <LuEyeOff onClick={toggleeye} size={20} className="text-default-600 absolute sm:right-[20px] right-[20px] bottom-[16px]" />}
-                            {isActive && <LuEye onClick={toggleeye} size={20} className="text-default-600 absolute sm:right-[20px] right-[20px] bottom-[16px]" />}
+                            {isActive && <LuEyeOff onClick={toggleeye} size={20} className="text-default-600 absolute sm:right-[20px] right-[20px] bottom-[16px]" />}
+                            {!isActive && <LuEye onClick={toggleeye} size={20} className="text-default-600 absolute sm:right-[20px] right-[20px] bottom-[16px]" />}
 
                         </div>
                         <span id="invalidpass" className="text-red-700 hidden">Invalid password</span>
                         <span id="enterpass" className="text-red-700 hidden">please enter the password</span>
                         <button
                             type="submit"
-                            className="relative top-12 sm:w-96 lg:w-[400px] lg:h-14 w-64 shadow-lg shadow-gray-400 rounded-lg bg-green-500 px-6 py-3 text-base text-black transition-all hover:bg-green-400"
+                            className="relative top-10 sm:w-96 lg:w-[382px] lg:h-12 w-64 shadow-lg shadow-gray-400 rounded-lg bg-green-500 px-6 py-3 text-lg flex items-center justify-center text-black transition-all hover:bg-green-400"
                         >
                             Log In
                         </button>
