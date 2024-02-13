@@ -2,10 +2,15 @@ import AuthFormLayout from "../../../component/AuthFormLayout";
 import authBgOtherImg from "../../../assets/images/auth-bg.png"
 import waveOtherImg from "../../../assets/images/wave.png"
 import React from 'react';
-const Login = () => {
+import PropTypes from 'prop-types'
+// import { data } from "autoprefixer";
+const Login = ({sendtoparent}) => {
+  const handleformvalid=(data)=>{
+    sendtoparent(data)
+  }
   return (
     <div>
-      <AuthFormLayout />
+      <AuthFormLayout sendtoparent={handleformvalid}/>
       <div>
         <div className="absolute end-0 start-0 top-1/2 -z-10 w-full -translate-y-1/3">
           <img
@@ -31,5 +36,7 @@ const Login = () => {
 
   );
 };
-
+Login.propTypes = {
+  sendtoparent: PropTypes.func.isRequired // Ensure sendtoparent is a function and required
+};
 export default Login;
