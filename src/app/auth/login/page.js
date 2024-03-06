@@ -12,16 +12,15 @@ const Login = ({sendtoparent}) => {
     <div>
       <AuthFormLayout sendtoparent={handleformvalid}/>
       <div>
-        <div className="absolute end-0 start-0 top-1/2 -z-10 w-full -translate-y-1/3">
+        <div className="absolute end-0 start-0 top-1/2 z-20 w-full -translate-y-1/3">
           <img
             width={1853}
-            height={420}
             src={waveOtherImg}
             alt=""
-            className="flex w-full opacity-60"
+            className="flex w-full opacity-60 h-44"
           />
         </div>
-        <div className="absolute end-0 top-0 -z-10 hidden h-5/6 xl:flex">
+        <div className="absolute end-0 top-0 z-10 hidden h-5/6 xl:flex">
           <img
             width={657}
             height={400}

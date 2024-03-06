@@ -1,0 +1,8 @@
+.myfont{
+    font-family:poppins;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(/src/font/Poppins-Regular.ttf);
+}
